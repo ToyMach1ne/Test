@@ -1,0 +1,12 @@
+/*
+  Theme Name:   WP Test
+  Theme URI:    https://github.com/ToyMach1ne/Test
+  Description:  Приветствую. <br />Тема создана для тестового задания.
+  Version:      2018-03-20
+  Tags:         HTML5, CSS3, WordPress, SCSS, Gulp, Node.js
+
+  License:  MIT
+  License URI:  http://opensource.org/licenses/mit-license.php
+*/
+
+@import url('css/main.css');

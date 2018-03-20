@@ -1,0 +1,11 @@
+$rb-font-path: '../fonts' !default;
+
+@font-face {
+  font-family: 'Gadugi';
+  font-weight: 300;
+  font-style: normal;
+
+  src: url('#{$rb-font-path}/gadugi.ttf');
+  src: local('Gadugi Regular'),
+  local('gadugi-regular')
+}

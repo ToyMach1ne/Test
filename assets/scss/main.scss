@@ -1,0 +1,158 @@
+@import "grid/bootstrap";
+@import "grid/bootstrap-theme";
+
+header {
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, .3));
+  position: absolute;
+  z-index: 10;
+  top:0;
+  left: 0;
+  width: 100%;
+  .header__title--text {
+    font-family: 'Gadugi';
+    color:#bacf42;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+  }
+  .header__logo {
+    padding: 18px 15px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    .header__logo--first {
+      max-width: 80px;
+      width: 100%;
+      max-height: 20px;
+      margin-right: 45px;
+    }
+    .header__phone {
+      font-family: 'Roboto Condensed';
+      font-weight: normal;
+      color:#fff;
+      font-size: 24px;
+      padding: 0 45px 0 20px;
+      border-right:1px solid #bacf42;
+      border-left:1px solid #bacf42;
+      letter-spacing: 1px;
+      display: block;
+      background-image: url(../img/phone-white.png);
+      background-repeat: no-repeat;
+      background-position: 90% center;
+      background-size: 23px;
+      &:hover {
+        color:#fff;
+        text-decoration: none;
+        background-image: url(../img/phone-black.png);
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    .header__logo--second {
+      max-width: 90px;
+      width: 100%;
+      max-height: 25px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.main__block {
+  height: 100vh;
+  background: #000 url(../img/first-bg.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  &:before {
+    display: block;
+    content:'';
+    background: radial-gradient(circle at 60% 50%,transparent 30%,rgba(0,0,0,.3) 40%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index:0;
+  }
+  .main__block--bottom {
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    left: 0;
+    background-color: #d1d1d1;
+    color:#333;
+    padding: 35px 0;
+    .bottom__block--left {
+      display: flex;
+      justify-content:center;
+      .block__left--first, .block__left--second {
+        padding:20px;
+        display: flex;
+        align-items: center;
+        border-left: 1px solid #868686;
+        border-right: 1px solid #868686;
+        .grey__square {
+          width: 50px;
+          height: 50px;
+          border-radius:2px;
+          background-color: #868686;
+          margin-right: 15px;
+        }
+        .text__wrap {
+          font-family: 'Assistant', sans-serif;
+          h4 {
+            font-weight: bold;
+            font-size: 31px;
+            margin: 0;
+            line-height: .8;
+          }
+          p {
+            font-weight: normal;
+            font-size: 23px;
+            margin: 0;
+            line-height: .8;
+          }
+        }
+      }
+      .block__left--second {
+        border-left: 0;
+      }
+    }
+    .bottom__block--right {
+      direction: rtl;
+      .right__text--wrap {
+        padding-right: 13px;
+        margin-right: 15%;
+        font-family: 'Rubik', sans-serif;
+        border-right: 11px solid #bacf42;
+        h4 {
+          margin-top: 0;
+          margin-bottom: 15px;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 1;
+        }
+        p {
+          font-size: 22px;
+          font-weight: 300;
+          line-height: 1;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  display: none;
+}
+
+@import "fonts/font_gadugi";
+@import "fonts/font_roboto";
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400');
