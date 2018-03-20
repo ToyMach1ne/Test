@@ -13,7 +13,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Assistant");
+@import url("https://fonts.googleapis.com/css?family=Assistant:300,400");
 @import url("https://fonts.googleapis.com/css?family=Rubik:300,400");
 html {
   font-family: sans-serif;
@@ -2217,6 +2217,7 @@ header .header__title--text {
   color: #bacf42;
   text-transform: uppercase;
   font-size: 36px;
+  letter-spacing: 1px;
   margin-top: 10px;
   margin-bottom: 0;
   font-weight: 600;
@@ -2291,6 +2292,127 @@ header .header__logo .header__logo--second {
   z-index: 0;
 }
 
+.main__block .main__form--wrap {
+  height: auto;
+  max-width: 455px;
+  width: 100%;
+  position: absolute;
+  left: 18%;
+  top: 25%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 40px 60px 25px;
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+}
+
+.main__block .main__form--wrap .form__title-wrap {
+  margin-bottom: 30px;
+}
+
+.main__block .main__form--wrap .form__title-wrap p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+}
+
+.main__block .main__form--wrap .form__title-wrap .title__first {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.main__block .main__form--wrap form {
+  direction: rtl;
+}
+
+.main__block .main__form--wrap form input[type='text'] {
+  background-color: #e1e1e0;
+  border-radius: 2px;
+  padding: 15px;
+  line-height: 1;
+  color: #606060;
+  font-size: 16px;
+  font-weight: 300;
+  max-width: 330px;
+  width: 100%;
+  margin-bottom: 13px;
+  border: 1px solid #706e6d;
+}
+
+.main__block .main__form--wrap form input[type='text']:focus {
+  outline: none;
+}
+
+.main__block .main__form--wrap form input[type='submit'] {
+  background-color: #bacf42;
+  border: 0;
+  border-radius: 2px;
+  padding: 15px;
+  line-height: 1;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+  max-width: 330px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap .checkbox__text {
+  font-family: 'Assistant';
+  font-weight: 300;
+  color: #b7b6b6;
+  display: inline-block;
+  margin: 0;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap #checkbox__field--wrap {
+  display: block;
+  line-height: 1;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap #checkbox__field--wrap label {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #b7b6b6;
+  display: inline-block;
+  color: #bacf42;
+  border-radius: 2px;
+  cursor: pointer;
+  text-indent: 10000px;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap #checkbox__field--wrap label input[type='checkbox'] {
+  display: none;
+}
+
+.main__block .main__form--wrap form .form__checkbox--wrap #checkbox__field--wrap .active_label {
+  background-image: url(../img/ckeckbox-check.png);
+  background-size: contain;
+}
+
+.main__block .main__form--wrap .main__location--wrap {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  padding-right: 25px;
+  line-height: 1;
+  display: block;
+  position: relative;
+  background-image: url(../img/map-marker.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  color: #c7c7c7;
+  padding: 9px 25px 0 0;
+}
+
 .main__block .main__block--bottom {
   position: absolute;
   width: 100%;
@@ -2306,7 +2428,7 @@ header .header__logo .header__logo--second {
   justify-content: center;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--first, .main__block .main__block--bottom .bottom__block--left .block__left--second {
+.main__block .main__block--bottom .bottom__block--left .block__left {
   padding: 20px;
   display: flex;
   align-items: center;
@@ -2314,7 +2436,7 @@ header .header__logo .header__logo--second {
   border-right: 1px solid #868686;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--first .grey__square, .main__block .main__block--bottom .bottom__block--left .block__left--second .grey__square {
+.main__block .main__block--bottom .bottom__block--left .block__left .grey__square {
   width: 50px;
   height: 50px;
   border-radius: 2px;
@@ -2322,25 +2444,25 @@ header .header__logo .header__logo--second {
   margin-right: 15px;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--first .text__wrap, .main__block .main__block--bottom .bottom__block--left .block__left--second .text__wrap {
+.main__block .main__block--bottom .bottom__block--left .block__left .text__wrap {
   font-family: 'Assistant', sans-serif;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--first .text__wrap h4, .main__block .main__block--bottom .bottom__block--left .block__left--second .text__wrap h4 {
+.main__block .main__block--bottom .bottom__block--left .block__left .text__wrap h4 {
   font-weight: bold;
   font-size: 31px;
   margin: 0;
   line-height: .8;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--first .text__wrap p, .main__block .main__block--bottom .bottom__block--left .block__left--second .text__wrap p {
+.main__block .main__block--bottom .bottom__block--left .block__left .text__wrap p {
   font-weight: normal;
   font-size: 23px;
   margin: 0;
   line-height: .8;
 }
 
-.main__block .main__block--bottom .bottom__block--left .block__left--second {
+.main__block .main__block--bottom .bottom__block--left .block__left:last-child {
   border-left: 0;
 }
 
@@ -2350,7 +2472,6 @@ header .header__logo .header__logo--second {
 
 .main__block .main__block--bottom .bottom__block--right .right__text--wrap {
   padding-right: 13px;
-  margin-right: 15%;
   font-family: 'Rubik', sans-serif;
   border-right: 11px solid #bacf42;
 }
@@ -2374,12 +2495,50 @@ footer {
   display: none;
 }
 
+@media screen and (max-height: 850px) {
+  .main__block .main__form--wrap {
+    padding: 20px 60px;
+    top: 12%;
+  }
+  .main__block .main__form--wrap .form__title-wrap {
+    margin-bottom: 15px;
+  }
+  .main__block .main__form--wrap form input[type='text'] {
+    margin-bottom: 13px;
+  }
+  .main__block .main__form--wrap form input[type='submit'] {
+    margin-bottom: 25px;
+  }
+  .main__block .main__form--wrap form .form__checkbox--wrap {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .main__block .main__form--wrap {
+    padding: 10px 60px;
+    top: 12%;
+  }
+  .main__block .main__form--wrap .form__title-wrap {
+    margin-bottom: 10px;
+  }
+  .main__block .main__form--wrap form input[type='text'] {
+    margin-bottom: 10px;
+  }
+  .main__block .main__form--wrap form input[type='submit'] {
+    margin-bottom: 10px;
+  }
+  .main__block .main__form--wrap form .form__checkbox--wrap {
+    margin-bottom: 10px;
+  }
+}
+
 @font-face {
   font-family: 'Gadugi';
   font-weight: 300;
   font-style: normal;
-  src: url("../fonts/gadugi.ttf");
-  src: local("Gadugi Regular"), local("gadugi-regular");
+  src: url("../fonts/gadugi-normal.eot");
+  src: local("Gadugi Regular"), local("gadugi-regular"), url("../fonts/gadugi-normal.eot") format("embedded-opentype"), url("../fonts/gadugi-normal.woff") format("woff");
 }
 
 @font-face {

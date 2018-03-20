@@ -5,7 +5,9 @@ $rb-font-path: '../fonts' !default;
   font-weight: 300;
   font-style: normal;
 
-  src: url('#{$rb-font-path}/gadugi.ttf');
+  src: url('#{$rb-font-path}/gadugi-normal.eot');
   src: local('Gadugi Regular'),
-  local('gadugi-regular')
+  local('gadugi-regular'),
+  url('#{$rb-font-path}/gadugi-normal.eot') format('embedded-opentype'),
+  url('#{$rb-font-path}/gadugi-normal.woff') format('woff');
 }

@@ -13,6 +13,7 @@ header {
     color:#bacf42;
     text-transform: uppercase;
     font-size: 36px;
+    letter-spacing: 1px;
     margin-top: 10px;
     margin-bottom: 0;
     font-weight: 600;
@@ -79,6 +80,112 @@ header {
     left: 0;
     z-index:0;
   }
+  .main__form--wrap {
+    height: auto;
+    max-width: 455px;
+    width: 100%;
+    position: absolute;
+    left: 18%;
+    top: 25%;
+    background-color: rgba(0, 0, 0, .6);
+    color:#fff;
+    padding: 40px 60px 25px;
+    direction:rtl;
+    font-family: 'Rubik', sans-serif;
+    .form__title-wrap {
+      margin-bottom: 30px;
+      p {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1;
+        font-weight: 300;
+      }
+      .title__first {
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+    }
+    form {
+      direction: rtl;
+      input[type='text'] {
+        background-color: #e1e1e0;
+        border-radius:2px;
+        padding:15px;
+        line-height: 1;
+        color:#606060;
+        font-size: 16px;
+        font-weight: 300;
+        max-width: 330px;
+        width: 100%;
+        margin-bottom: 13px;
+        border:1px solid #706e6d;
+        &:focus {
+          outline:none;
+        }
+      }
+      input[type='submit'] {
+        background-color: #bacf42;
+        border:0;
+        border-radius:2px;
+        padding:15px;
+        line-height: 1;
+        color:#fff;
+        font-size: 19px;
+        font-weight: 400;
+        max-width: 330px;
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      .form__checkbox--wrap {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        .checkbox__text {
+          font-family: 'Assistant';
+          font-weight: 300;
+          color:#b7b6b6;
+          display: inline-block;
+          margin: 0;
+        }
+        #checkbox__field--wrap {
+          display: block;
+          line-height: 1;
+          label {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #b7b6b6;
+            display: inline-block;
+            color: #bacf42;
+            border-radius: 2px;
+            cursor: pointer;
+            text-indent: 10000px;
+            input[type='checkbox'] {
+              display: none;
+            }
+          }
+          .active_label {
+            background-image: url(../img/ckeckbox-check.png);
+            background-size: contain;
+          }
+        }
+      }
+    }
+    .main__location--wrap {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 300;
+      padding-right: 25px;
+      line-height: 1;
+      display: block;
+      position: relative;
+      background-image: url(../img/map-marker.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      color:#c7c7c7;
+      padding: 9px 25px 0 0;
+    }
+  }
   .main__block--bottom {
     position: absolute;
     width: 100%;
@@ -90,7 +197,7 @@ header {
     .bottom__block--left {
       display: flex;
       justify-content:center;
-      .block__left--first, .block__left--second {
+      .block__left {
         padding:20px;
         display: flex;
         align-items: center;
@@ -118,16 +225,15 @@ header {
             line-height: .8;
           }
         }
-      }
-      .block__left--second {
-        border-left: 0;
+        &:last-child {
+          border-left: 0;
+        }
       }
     }
     .bottom__block--right {
       direction: rtl;
       .right__text--wrap {
         padding-right: 13px;
-        margin-right: 15%;
         font-family: 'Rubik', sans-serif;
         border-right: 11px solid #bacf42;
         h4 {
@@ -152,7 +258,55 @@ footer {
   display: none;
 }
 
+//MEDIA QUERY
+@media screen and (max-height: 850px) {
+  .main__block {
+    .main__form--wrap {
+      padding: 20px 60px;
+      top: 12%;
+      .form__title-wrap {
+        margin-bottom: 15px;
+      }
+      form {
+        input[type='text'] {
+          margin-bottom: 13px;
+        }
+        input[type='submit'] {
+          margin-bottom: 25px;
+        }
+        .form__checkbox--wrap {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 670px) {
+  .main__block {
+    .main__form--wrap {
+      padding: 10px 60px;
+      top: 12%;
+      .form__title-wrap {
+        margin-bottom: 10px;
+      }
+      form {
+        input[type='text'] {
+          margin-bottom: 10px;
+        }
+        input[type='submit'] {
+          margin-bottom: 10px;
+        }
+        .form__checkbox--wrap {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
 @import "fonts/font_gadugi";
 @import "fonts/font_roboto";
-@import url('https://fonts.googleapis.com/css?family=Assistant');
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,400');

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,7 +11,6 @@
   <link href="favicon.ico" rel="shortcut icon">
 
   <!-- css + javascript -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/main.css" media="all">
 
   <!--[if lt IE 9]>
@@ -19,7 +18,7 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="js/modernizr.min.js"></script>
 
 </head>
 <body>
@@ -44,6 +43,26 @@
   </header><!-- /header -->
 
   <section role="main" class="main__block">
+
+    <div class="main__form--wrap">
+      <div class="form__title-wrap">
+        <p class="title__first">לורם איפסום פסום דולור</p>
+        <p class="title__second">אלית קוואזי במר מודוף</p>
+      </div>
+      <form action="#" method="get" id="main__form">
+        <input type="text" placeholder="לורם*" />
+        <input type="text" placeholder="לורם*" />
+        <input type="text" placeholder="לורם*" />
+        <div class="form__checkbox--wrap">
+          <input type="checkbox" id="checkbox__field" />
+          <label for="checkbox__field" class="checkbox__label"></label>
+          <p class="checkbox__text">לורם איפסום פסום דולור סיט אמט</p>
+        </div>
+        <input type="submit" value="לורם" />
+      </form>
+      <p class="main__location--wrap">פוסיליס קוויס, אקווזמן קוואזי במר מודוף</p>
+    </div><!-- /main__form--wrap -->
+
     <div class="main__block--bottom">
       <div class="container">
         <div class="row">
@@ -71,15 +90,14 @@
           </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
-    </div>
+    </div><!-- /.main__block--bottom -->
     
-
   </section><!-- /section -->
 </div><!-- /wrapper -->
 
 <footer role="contentinfo"></footer><!-- /footer -->
 
-  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
 
 </body>
