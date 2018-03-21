@@ -2,7 +2,10 @@
 
 	  <section role="main" class="main__block">
 
+	  	<a href="#" class="hidden__button--form">Open Form</a>
+
 	    <div class="main__form--wrap">
+	    	<a href="#" class="close__form"></a>
 	      <div class="form__title-wrap">
 	        <p class="title__first"><?php the_field('form_title'); ?></p>
 	        <p class="title__second"><?php the_field('form_undertitle'); ?></p>
@@ -17,7 +20,7 @@
 	      <div class="container">
 	        <div class="row">
 
-	          <div class="col-md-4 col-sm-4 bottom__block--left">
+	          <div class="col-md-4 col-sm-4 col-xs-12 bottom__block--left">
 	          	<?php if( have_rows('grey_square') ): while ( have_rows('grey_square') ) : the_row(); ?>
 		            <div class="block__left">
 		              <div class="grey__square"></div>
@@ -29,7 +32,7 @@
 	            <?php endwhile; endif; ?>
 	          </div>
 
-	          <div class="col-md-8 col-sm-8 bottom__block--right">
+	          <div class="col-md-8 col-sm-8 col-xs-12 bottom__block--right">
 	            <div class="right__text--wrap">
 	              <h4><?php the_field('right_field_title'); ?></h4>
 	              <p><?php the_field('right_field_description'); ?>י</p>

@@ -24,11 +24,11 @@
       <div class="container">
         <div class="row">
 
-          <div class="header__title--block col-md-6 col-sm-6">
+          <div class="header__title--block col-md-6 col-sm-4 col-xs-12">
             <h1 class="header__title--text"><?php the_field('header_title'); ?></h1>
           </div><!-- /header__logo -->
 
-          <div class="header__logo col-md-6 col-sm-6">
+          <div class="header__logo col-md-6 col-sm-8 col-xs-12">
             <img class="header__logo--first" alt="logotype" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>">
 
             <a href="tel:<?php the_field('header_phone'); ?>" class="header__phone"><?php the_field('header_phone'); ?></a>

@@ -80,6 +80,24 @@ header {
     left: 0;
     z-index:0;
   }
+  .hidden__button--form {
+    background-color: #bacf42;
+    border: 0;
+    border-radius: 2px;
+    padding: 15px;
+    line-height: 1;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 400;
+    max-width: 330px;
+    width: 90%;
+    display: block;
+    text-align: center;
+    display: none;
+    &:focus {
+      text-decoration: none;
+    }
+  }
   .main__form--wrap {
     height: auto;
     max-width: 455px;
@@ -92,6 +110,45 @@ header {
     padding: 40px 60px 25px;
     direction:rtl;
     font-family: 'Rubik', sans-serif;
+    z-index: 100;
+    .close__form {
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      width: 20px;
+      height: 20px;
+      display: none;
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        height: 0;
+        border-top: 1px solid #bacf42;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        height: 0;
+        border-top: 1px solid #bacf42;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+    }
     .form__title-wrap {
       margin-bottom: 30px;
       p {
@@ -169,6 +226,9 @@ header {
           }
         }
       }
+      .wpcf7-validation-errors {
+        margin: 0;
+      }
     }
     .main__location--wrap {
       margin: 0;
@@ -194,6 +254,7 @@ header {
     background-color: #d1d1d1;
     color:#333;
     padding: 35px 0;
+    z-index: 5;
     .bottom__block--left {
       display: flex;
       justify-content:center;
@@ -277,6 +338,9 @@ footer {
         .form__checkbox--wrap {
           margin-bottom: 15px;
         }
+        .ajax-loader {
+          display: none;
+        }
       }
     }
   }
@@ -305,6 +369,127 @@ footer {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .main__block {
+    background-position: 70% center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  header {
+    .header__title--text {
+      margin-top: 0;
+      font-size: 24px;
+    }
+  }
+  .main__block {
+    background-position: right center;
+    .main__block--bottom {
+      padding: 35px 0 35px 25px;
+      .bottom__block--left {
+        .block__left {
+          padding: 20px 10px;
+          .grey__square {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .bottom__block--right {
+        .right__text--wrap {
+          h4 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    .header__logo {
+      padding: 10px 15px;
+      .header__logo--first {
+        margin-right: 10px;
+        height: auto;
+        max-width: 70px;
+      }
+      .header__phone {
+        background-image: none;
+        padding: 0 10px;
+        font-size: 22px;
+        &:hover {
+          background-image: none;
+        }
+      }
+      .header__logo--second {
+        margin-left: 10px;
+        height: auto;
+        max-width: 80px;
+      }
+    }
+  }
+  .main__block {
+    background-position: 75%;
+    .hidden__button--form {
+      display: block;
+      position: absolute;
+      bottom: 60%;
+      left: 5%;
+      max-width: 100%;
+    }
+    .main__form--wrap {
+      display: none;
+      position: fixed;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding:50px 40px 25px;
+      background-color: rgba(0,0,0,.9);
+      .close__form {
+        display: block;
+      }
+      .main__location--wrap {
+        background-size: 20px;
+        padding-top: 15px;
+      }
+    }
+    .main__block--bottom {
+      padding: 10px;
+      .bottom__block--left {
+        margin-bottom: 15px;
+      }
+      .bottom__block--right {
+        padding: 0;
+        .right__text--wrap {
+          h4 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  header {
+    .header__logo {
+      .header__phone {
+        padding: 0 5px;
+        font-size: 20px;
+      }
+    }
+  }
+}
 
 @import "fonts/font_gadugi";
 @import "fonts/font_roboto";

@@ -2292,6 +2292,26 @@ header .header__logo .header__logo--second {
   z-index: 0;
 }
 
+.main__block .hidden__button--form {
+  background-color: #bacf42;
+  border: 0;
+  border-radius: 2px;
+  padding: 15px;
+  line-height: 1;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 400;
+  max-width: 330px;
+  width: 90%;
+  display: block;
+  text-align: center;
+  display: none;
+}
+
+.main__block .hidden__button--form:focus {
+  text-decoration: none;
+}
+
 .main__block .main__form--wrap {
   height: auto;
   max-width: 455px;
@@ -2304,6 +2324,48 @@ header .header__logo .header__logo--second {
   padding: 40px 60px 25px;
   direction: rtl;
   font-family: 'Rubik', sans-serif;
+  z-index: 100;
+}
+
+.main__block .main__form--wrap .close__form {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.main__block .main__form--wrap .close__form:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  height: 0;
+  border-top: 1px solid #bacf42;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
+.main__block .main__form--wrap .close__form:after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 25px;
+  height: 0;
+  border-top: 1px solid #bacf42;
+  transform: rotate(-45deg);
+  transform-origin: center;
 }
 
 .main__block .main__form--wrap .form__title-wrap {
@@ -2397,6 +2459,10 @@ header .header__logo .header__logo--second {
   background-size: contain;
 }
 
+.main__block .main__form--wrap form .wpcf7-validation-errors {
+  margin: 0;
+}
+
 .main__block .main__form--wrap .main__location--wrap {
   margin: 0;
   font-size: 16px;
@@ -2421,6 +2487,7 @@ header .header__logo .header__logo--second {
   background-color: #d1d1d1;
   color: #333;
   padding: 35px 0;
+  z-index: 5;
 }
 
 .main__block .main__block--bottom .bottom__block--left {
@@ -2512,6 +2579,9 @@ footer {
   .main__block .main__form--wrap form .form__checkbox--wrap {
     margin-bottom: 15px;
   }
+  .main__block .main__form--wrap form .ajax-loader {
+    display: none;
+  }
 }
 
 @media screen and (max-height: 670px) {
@@ -2530,6 +2600,112 @@ footer {
   }
   .main__block .main__form--wrap form .form__checkbox--wrap {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main__block {
+    background-position: 70% center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  header .header__title--text {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  .main__block {
+    background-position: right center;
+  }
+  .main__block .main__block--bottom {
+    padding: 35px 0 35px 25px;
+  }
+  .main__block .main__block--bottom .bottom__block--left .block__left {
+    padding: 20px 10px;
+  }
+  .main__block .main__block--bottom .bottom__block--left .block__left .grey__square {
+    width: 40px;
+    height: 40px;
+  }
+  .main__block .main__block--bottom .bottom__block--right .right__text--wrap h4 {
+    font-size: 20px;
+  }
+  .main__block .main__block--bottom .bottom__block--right .right__text--wrap p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .header__logo {
+    padding: 10px 15px;
+  }
+  header .header__logo .header__logo--first {
+    margin-right: 10px;
+    height: auto;
+    max-width: 70px;
+  }
+  header .header__logo .header__phone {
+    background-image: none;
+    padding: 0 10px;
+    font-size: 22px;
+  }
+  header .header__logo .header__phone:hover {
+    background-image: none;
+  }
+  header .header__logo .header__logo--second {
+    margin-left: 10px;
+    height: auto;
+    max-width: 80px;
+  }
+  .main__block {
+    background-position: 75%;
+  }
+  .main__block .hidden__button--form {
+    display: block;
+    position: absolute;
+    bottom: 60%;
+    left: 5%;
+    max-width: 100%;
+  }
+  .main__block .main__form--wrap {
+    display: none;
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 50px 40px 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .main__block .main__form--wrap .close__form {
+    display: block;
+  }
+  .main__block .main__form--wrap .main__location--wrap {
+    background-size: 20px;
+    padding-top: 15px;
+  }
+  .main__block .main__block--bottom {
+    padding: 10px;
+  }
+  .main__block .main__block--bottom .bottom__block--left {
+    margin-bottom: 15px;
+  }
+  .main__block .main__block--bottom .bottom__block--right {
+    padding: 0;
+  }
+  .main__block .main__block--bottom .bottom__block--right .right__text--wrap h4 {
+    font-size: 18px;
+  }
+  .main__block .main__block--bottom .bottom__block--right .right__text--wrap p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  header .header__logo .header__phone {
+    padding: 0 5px;
+    font-size: 20px;
   }
 }
 
