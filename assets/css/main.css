@@ -2564,8 +2564,8 @@ footer {
 
 @media screen and (max-height: 850px) {
   .main__block .main__form--wrap {
-    padding: 20px 60px;
-    top: 12%;
+    padding: 15px 60px;
+    top: 11%;
   }
   .main__block .main__form--wrap .form__title-wrap {
     margin-bottom: 15px;
